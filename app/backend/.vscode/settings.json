@@ -1,0 +1,8 @@
+{
+    "python.testing.pytestArgs": [
+        "./tests/unit/services/topic_coverage_discovery",
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.terminal.activateEnvironment": true
+}
