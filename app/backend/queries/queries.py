@@ -63,13 +63,13 @@ class Queries():
         if cluster:
             df_filtered = df_filtered[df_filtered['cluster'] == cluster]
         
-        print(df_filtered)
+        #print(df_filtered)
         years = df_filtered['year'].unique()
         for year in years:
             x.insert(0, str(year))
             df_year_filtered = df_filtered[df_filtered['year'] == year]
                 
-            print(df_year_filtered[column_name])
+            #print(df_year_filtered[column_name])
             if(operation_type == 'mean' or operation_type == None):
                 y.insert(0, float(df_year_filtered[column_name].mean()))
                 operation_text = 'Average '
@@ -79,7 +79,9 @@ class Queries():
             elif(operation_type == 'min'):
                 y.insert(0, float(df_year_filtered[column_name].min()))
                 operation_text = 'Minimum '
-        
-        average = sum(y)/len(y)
+        if len(y) == 0:
+            average = 0
+        else:
+            average = sum(y)/len(y)
             
         return {'title': operation_text + column_name + ' per year', 'x':x, 'y':y, 'average':average}
