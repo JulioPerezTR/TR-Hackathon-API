@@ -14,15 +14,15 @@ export class DashboardComponent implements OnInit {
   public mainChart: IChartProps = {};
   public chart: Array<IChartProps> = [];
   public averageRadioGroup = new UntypedFormGroup({
-    averageRadio: new UntypedFormControl('Month')
+    averageRadio: new UntypedFormControl('Average')
   });
 
   ngOnInit(): void {
     this.mainChart = this.chartsData.mainChart;
   }
 
-  setTrafficPeriod(value: string): void {
-    this.averageRadioGroup.setValue({ trafficRadio: value });
+  setTypeData(value: string): void {
+    this.averageRadioGroup.setValue({ averageRadio: value });
     this.chartsData.initMainChart(value);
     this.mainChart = this.chartsData.mainChart;
   }

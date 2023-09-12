@@ -1,1 +1,42 @@
-<p>countries works!</p>
+<c-row>
+    <c-col xs="3">
+        <select name="" id="" class="form-select">
+            <ng-container *ngFor="let country of countries; let i = index">
+                <option value="{{country}}">{{country}}</option>
+            </ng-container>
+        </select>
+    </c-col>
+
+    <c-col xs="3">
+        <select name="" id="" class="form-select">
+            <ng-container *ngFor="let city of cities; let i = index">
+                <option value="{{city}}">{{city}}</option>
+            </ng-container>
+        </select>
+    </c-col>
+
+    <c-col xs="3">
+        <select name="" id="" class="form-select">
+            <ng-container *ngFor="let job of commonPositions; let i = index">
+                <option value="{{job}}">{{job}}</option>
+            </ng-container>
+        </select>
+    </c-col>
+</c-row>
+
+
+
+<c-row>
+    <ng-container *ngFor="let graphic of graphicNames; let i = index">
+        <c-col xs="12" lg="6">
+            <c-card class="mb-4">
+                <c-card-header>
+                    {{ graphicNames[i] }}
+                </c-card-header>
+                <c-card-body>
+                    <c-chart type="line" [data]="data[i]"></c-chart>
+                </c-card-body>
+            </c-card>
+        </c-col>
+    </ng-container>
+</c-row>
