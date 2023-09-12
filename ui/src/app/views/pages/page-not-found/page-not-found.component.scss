@@ -1,0 +1,46 @@
+.not-found-container {
+    align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	max-width: 480px;
+}
+
+.not-found-title {
+    font-size: 1.5rem;
+	line-height: 133%;
+    margin-top: 5rem;
+    margin-bottom: 0;
+	text-align: center;
+}
+
+.not-found-message {
+    margin-bottom: 0;
+	text-align: center;
+    font-size: 1rem;
+}
+
+.not-found-divider {
+    border-color: rgb(144, 144, 144);;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	margin: 8px 0 1rem;
+	width: 100%;
+}
+
+.not-found-message {
+    margin-bottom: 0;
+	text-align: center;
+}
+
+.not-found-list {
+    list-style: none;
+    padding: 0;
+    list-style-type: none;
+	margin: 8px 0 0;
+	padding: 0;
+}
+
+.not-found-list-item {
+    text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+<c-row>
+    <ng-container *ngFor="let graphic of graphicNames; let i = index">
+        <c-col xs="12" lg="6">
+            <c-card class="mb-4">
+                <c-card-header>
+                    {{ graphicNames[i] }}
+                </c-card-header>
+                <c-card-body>
+                    <c-chart type="bar" [data]="data[i]"></c-chart>
+                </c-card-body>
+            </c-card>
+        </c-col>
+    </ng-container>
+</c-row>

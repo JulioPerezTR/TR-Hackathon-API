@@ -1,0 +1,14 @@
+<c-row>
+  <ng-container *ngFor="let graphic of graphicNames; let i = index">
+    <c-col sm="6" xl="3">
+      <c-widget-stat-a class="mb-4" [color]=graphicColors[i%graphicColors.length] [title]=graphic>
+        <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+          {{ graphicAverages[i] | number : '1.2-2' }}
+        </ng-template>
+        <ng-template cTemplateId="widgetChartTemplate">
+          <c-chart [data]="data[i]" [options]="options[i]" class="mt-3 mx-3" height="70" [type]="'line'"></c-chart>
+        </ng-template>
+      </c-widget-stat-a>
+    </c-col>
+  </ng-container>
+</c-row>
