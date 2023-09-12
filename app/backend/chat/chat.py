@@ -14,12 +14,12 @@ class Chat():
         #milvus.index_document(document)
         docs = milvus.ask_question(question)
         print(docs)
-        documents_from_milvus = {}
+        documents_from_milvus = []
 
         for doc in docs:
             documents_from_milvus.append(doc[0].page_content)
 
-        return docs
+        return documents_from_milvus
     
     def ask_and_analyze(self, question):
         milvus = DocumentMilvus()

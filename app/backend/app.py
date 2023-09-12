@@ -52,5 +52,13 @@ def chat():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+@app.route("/chatAnalysis", methods=["GET"])
+def chat_analysis():
+    chat = Chat()
+    raw_response = chat.ask_and_analyze(request.args.get('question'))
+    response = jsonify(raw_response)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
 if __name__ == "__main__":
     app.run(debug=True)
