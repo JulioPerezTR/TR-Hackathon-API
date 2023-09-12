@@ -27,7 +27,7 @@ class Queries():
             self.average_reviews_per_year('Diversity & Inclusion', country, city, job_title, cluster, operation_type),
             self.average_reviews_per_year('Work-Life Balance', country, city, job_title, cluster, operation_type)
         ]
-        return json.dumps(result)
+        return result
     
     def total_reviews(self, country = '', city = '', job_title = '', cluster = ''):
         x = []
