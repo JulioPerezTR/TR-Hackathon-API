@@ -11,7 +11,7 @@ export class GeneralService {
 
 	getCardsData(): Observable<any> {
     return this.http.get<Array<ResponseData>>(
-      `http://127.0.0.1:5000/get_main_data?operation_type`
+      `https://glassdoranalyticsapi.azurewebsites.net/get_main_data`
     );
 	}
 }
