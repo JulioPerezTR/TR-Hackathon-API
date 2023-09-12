@@ -67,7 +67,7 @@ class Queries():
         if job_title:
             df_filtered = df_filtered[df_filtered['Job Title'] == job_title]
         if cluster:
-            df_filtered = df_filtered[df_filtered['cluster'] == cluster]
+            df_filtered = df_filtered[df_filtered['cluster'] == int(cluster)]
         
         #print(df_filtered)
         years = df_filtered['year'].unique()
